@@ -15,6 +15,21 @@ public class BookService {
 	@Autowired
 	BookDAO bookDao;
 	
+	
+	
+	public BookDAO getBookDao() {
+		return bookDao;
+	}
+	public void setBookDao(BookDAO bookDao) {
+		this.bookDao = bookDao;
+	}
+	public BookService() {
+		super();
+	}
+	public BookService(BookDAO bookDao) {
+		super();
+		this.bookDao = bookDao;
+	}
 	@Transactional
 	public List<Book>getAllBooks(){
 		return bookDao.getAllBooks();

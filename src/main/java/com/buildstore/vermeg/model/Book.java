@@ -64,7 +64,7 @@ public class Book {
 	}
 	
 
-	@JsonBackReference(value="orderline")
+	@JsonManagedReference(value="orderline")
 	public List<OrderLine> getOrderline() {
 		return orderline;
 	}
